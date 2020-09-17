@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="css/materialize.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/mdb.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
+
+    <!-- Custom styles for this template -->
+    
+
+  <style>
+     
+     
+      html, body, .viewport img {
+        width: 100%;
+        height: 100%; 
+        margin: 0;
+    
+         background:-webkit-linear-gradient(-135deg,magenta,yellow);
+         
+      }
+      
+  
+      .flex-container {
+     
+       
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: absolute;
+          object-position: center;
+           z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        
+    }
+    
+   .flex-item {
+       
+       background:-webkit-linear-gradient(-135deg,magenta,gold);
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+       background-size: cover;
+    }
+      #hover
+      {
+          color: white;
+           background:-webkit-linear-gradient(-135deg,magenta,gold);
+      }
+     
+    </style>
+</head>
+<body  >
+ 
+  <!--Your Main contents-->
+  <div id ="main" class="">
+      <div class="card-panel hoverable"  style="background: -webkit-linear-gradient(-135deg,magenta,gold)">
+      <center><i class="fa fa-paint-brush fa-3x"></i><p>Project Noelyne</p></center>
+      </div>
+      <div class="card-panel" style="background: -webkit-linear-gradient(-135deg,violet,yellow)">
+    <center><button class="btn-floating" onclick="window.location.href='Weather.html';"><i class="fa fa-cloud fa-4x "></i></button>
+        <p>Weather Dashboard</p>
+      
+      <br> <br> <br> <br> 
+        <button class="btn-floating" onclick="window.location.href='corona.html';"><i class="fa fa-search fa-4x"></i></button>
+        <p>Covid19 Tracker</p>
+      </center>  
+      
+      
+      
+      </div>
+      <div class="card-panel hoverable"  style="background: -webkit-linear-gradient(-135deg,yellow,violet)">
+          <div class="card"><center>Developer</center></div>
+          <marquee>
+              
+      <img src="abitoon.jpg" width="300">
+      <img src="IMG-20200710-WA0049.jpg" width="300">
+      <img src="IMG-20200710-WA0053.jpg" width="300">
+      <img src="IMG-20200710-WA0055.jpg" width="300">
+      <img src="IMG-20200710-WA0058.jpg" width="300">
+      <img src="IMG-20200724-WA0018.jpg" width="300">
+      <img src="IMG-20200724-WA0019.jpg" width="300">
+      </marquee>
+      
+      
+      
+      </div>
+ 
+
+ </div>
+<p></p> 
+  <!--Your Splash Screen-->
+  <div id="splash"  class="flex-container" 
+        style ="background:-webkit-linear-gradient(-135deg,magenta,gold); display: none"  >
+    
+     <!--Center align Splash contents in all screen sizes-->
+         <div class ="flex-item" >
+          <img src="abitoon.jpg" 
+               alt="app_icon" 
+               style="width:40%; top:1; "
+               />
+           
+          
+      </div></div>
+  <!--  Scripts-->
+ 
+    <script>
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demodots");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+     <script type="text/javascript">
+    
+    function fade(element) {
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+          
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 50);
+}
+
+    setTimeout(function(){ 
+          
+             if(typeof(Storage) !== "undefined") {
+         
+              console.log("Already shown" +sessionStorage.getItem('spalashShown'));
+
+               if( !sessionStorage.getItem('spalashShown') || sessionStorage.getItem('spalashShown') === null ) {  
+                 
+               document.getElementById('splash') .style.display = 'inline';
+
+                //Display splash
+                setTimeout(function(){   
+
+                 fade(document.getElementById('splash'));
+                  // document.getElementById('splash') .style.display = 'none'
+                   // window.location = "http://hiteshsahu.com";
+                  
+                 sessionStorage.setItem('spalashShown', true  );
+              }
+               , 3000);
+      
+                  } else {
+                    
+                     //Display Main Content
+                      document.getElementById('splash') .style.display = 'none'
+                        console.log("Already shown");
+                     }
+                  }
+         
+                else {
+                        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+                      }
+                         }, 0);
+
+  	</script>
+  </body>
+</html>
